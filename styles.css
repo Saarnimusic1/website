@@ -1,0 +1,1348 @@
+body {
+  background-color: #272e25;
+  color: white;
+  font-size: 21px;
+  
+  font-family: 'Cormorant Garamond';
+  
+}
+
+.home h1 {
+
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+  font-family: 'Castoro Titling' ;
+
+  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+li {
+  float: left;
+}
+
+h2  {
+  
+  font-family: 'Castoro Titling';
+}
+
+.navbar {
+  background : #131313;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  font-family: 'Castoro Titling';
+}
+
+.navbar__container {
+display: flex;
+justify-content: space-between;
+height: 80px;
+z-index: 999;
+width: 100%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+#navbar__logo {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+
+
+}
+
+
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 10px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+   background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  color: #fff;
+}
+
+.button:hover {
+  color: #000;
+  background: #EBD036;
+  transition: all 0.3s ease;
+}
+   
+.navbar__links:hover {
+  color:#EBD036;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 980px) {
+  .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 999;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+  }
+
+  .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 0;
+      transition: all 0.5s ease;
+      height: 50vh;
+      z-index: 999;
+      background: #131313;
+  }
+
+  .navbar__menu.active {
+      background: #131313;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 999;
+      height: 80vh;
+      font-size: 1.3rem;
+  }
+
+  #navbar__logo {
+      padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #fff;
+  }
+
+  .navbar__item {
+      width: 100%;
+  }
+
+  .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+  #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+  }
+
+  .navbar__btn {
+      padding-bottom: 2rem;
+  }
+
+  
+  .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+  }
+
+  .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+  transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  color: #131313;
+}
+
+.btn:hover{
+  background: #ffe449;
+  transition: all 0.3s ease;
+}
+
+.homefront {
+  background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 60%,
+    rgb(235, 208, 54, 0.2) 100%), url('images/background.jpg'); 
+      background-size: cover; 
+      height:40%; 
+      padding-top:80px; 
+      text-align:center;
+      padding: 10px 15px;
+}
+
+.home {
+  background-image:linear-gradient(to bottom, rgb(235, 208, 54, 0.1) 10%, rgba(0,0,0,1) 100%), 
+  url('images/markussaarni2.jpg'); 
+ /* background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 60%,
+    rgb(235, 208, 54, 0.2) 100%), url('images/markussaarni.jpeg'); */
+      background-size: cover; 
+      height:40%; 
+      padding-top:80px; 
+      text-align:center;
+      padding: 10px 15px;
+}
+
+.homefront img {
+  max-width: 30%;
+  height: auto;
+  padding-top:80px; 
+
+}
+
+.home img {
+  max-width: 20%;
+  height: auto;
+  padding-top:80px; 
+}
+
+/* Services Section CSS*/
+.services {
+ 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250vh;
+}
+
+.services h1 {
+
+ background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  color: #131313;
+  font-family: 'Castoro Titling';
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+ width: 100%;
+text-align: center;
+
+
+
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.services__card {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgba(115, 103, 33, 0.2) 100%), url('images/1.jpg');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services__card2 {
+  margin: 1rem;
+  height: 425px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%), url('images/5.jpg');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+
+
+
+
+.services__card:nth-child(2) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%),
+   url('images/2.jpg');
+ 
+}
+
+
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%),
+   url('images/3.jpg');
+}
+
+.services__card:nth-child(4) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%),
+   url('images/4.jpg');
+}
+
+.services__card:nth-child(5) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%),
+   url('images/6.jpg');
+}
+
+.services__card:nth-child(6) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 5%,
+  rgb(115, 103, 33, 0.2) 100%),
+   url('images/7.jpg');
+}
+
+/*portfolio*/
+
+.services__cardmarkus {
+  margin: 1rem;
+  height: 250px;
+  width: 250px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/HopeIsaLie_albumcover_web.jpg');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  
+}
+
+.services__cardmarkus:nth-child(2) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/1196103.jpg');
+ 
+ }
+
+
+
+
+ .services__cardmarkus:nth-child(3) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/1253358.jpg');
+ 
+ }
+
+
+ .services__cardmarkus:nth-child(4) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/ASWAALITEOT.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(5) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/ASADM.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(6) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/chaoticsanityworship.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(7) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/cs-mentalportrait-final.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(8) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/soaabsence.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(9) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/nos-broken-center-final.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(10) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/saunosaunacassette.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(11) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/666491.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(12) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/615597.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(13) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/560633.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(14) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/Kausalgia-dreamquest-CD.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(15) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/587657.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(16) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/as-cover2015-hi-res.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(17) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/611744.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(18) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/355207.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(19) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/341916.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(20) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/302117.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(21) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/kausalgiapromo.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(22) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/272708.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(23) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/283876.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(24) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/f3f46f_efb5047ce60a40c49b3a7883a4d6d637~mv2.gif');
+ 
+ }
+
+ .services__cardmarkus:nth-child(25) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/190216.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(26) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/107494.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(27) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/102332.webp');
+ 
+ }
+
+ .services__cardmarkus:nth-child(28) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%),
+   url('images/58751.webp');
+ 
+ }
+
+ .services__cardmarkus2 {
+  margin: 1rem;
+  height: 250px;
+  width: 250px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/952433.jpg');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  
+}
+
+.services__cardmarkus2:nth-child(2) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/1013290.jpg');
+ 
+ }
+
+ .services__cardmarkus2:nth-child(3) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/632824.jpg');
+ 
+ }
+
+ .services__cardmarkus2:nth-child(4) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/bloodyheathen-carnalruin-CD-final.webp');
+ 
+ }
+
+ .services__cardmarkus2:nth-child(5) {
+  background-image: linear-gradient(to bottom,   rgba(11, 9, 1, 0.752) 60%,
+  rgba(4, 4, 4, 0.883) 70%), url('images/126665_126666.jpg');
+ 
+ }
+
+.services__cardmarkus p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  font-size: 1rem;
+}
+
+.services__cardmarkus2 p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  font-size: 1rem;
+}
+
+.services__cardmarkus button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+  rgb(235, 208, 54, 0.1) 100%);
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.services__cardmarkus:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+  
+}
+
+.services__cardmarkus button:hover {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+transition: all 0.3s ease;
+}
+/* records */
+
+.services__cardrecords {
+  margin: 1rem;
+  height: 380px;
+  width: 380px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%), url('images/ASWAALITEOT.webp');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services__cardrecords2 {
+  margin: 1rem;
+  height: 380px;
+  width: 380px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%), url('images/ASADM.webp');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services__cardrecords:nth-child(2) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/ASADM.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(3) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/chaoticsanityworship.webp');
+ 
+ }
+
+
+ .services__cardrecords:nth-child(4) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/cs-mentalportrait-final.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(5) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/nos-broken-center-final.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(6) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/saunosaunacassette.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(7) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/bloodyheathen-carnalruin-CD-final.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(8) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/rearmederaofprecaritysaarni.webp');
+ 
+ }
+
+ .services__cardrecords:nth-child(9) {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 40%,
+  rgb(235, 208, 54, 0.1) 60%),
+   url('images/Kausalgia-dreamquest-CD.webp');
+ 
+ }
+
+.services__cardrecords p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__cardrecords2 p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__cardrecords3 p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__cardrecords button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+  rgb(235, 208, 54, 0.1) 100%);
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.services__cardrecords2 button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+  rgb(235, 208, 54, 0.1) 100%);
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__cardrecords3 button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+  rgb(235, 208, 54, 0.1) 100%);
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__cardrecords:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+  
+}
+
+.services__cardrecords button:hover {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+transition: all 0.3s ease;
+}
+
+.services__cardrecords2:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+}
+
+.services__cardrecords3:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+}
+
+@media screen and (max-width:960px) {
+
+  .services__cardrecords h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+
+.services__cardrecords {
+  width: 300px 
+}
+
+}
+
+
+
+
+.services h2 {
+  
+  position: absolute;
+  top: 400 px;
+  left: 30px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+  font-family: 'Castoro Titling' ;
+}
+
+.services__card p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__card2 p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__card3 p {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.services__card button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+  rgb(235, 208, 54, 0.1) 100%);
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+.services__card2 button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #25a53d;
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__card3 button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #33ab2d;
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+  
+}
+
+.services__card button:hover {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+transition: all 0.3s ease;
+}
+
+.services__card2:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+}
+
+.services__card3:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;   
+  cursor: pointer;
+}
+
+@media screen and (max-width:960px) {
+  .services {
+      height: 1600px;
+  }
+
+  .services h1 {
+      font-size: 2.5rem;
+      margin-top: 4rem;
+  }
+
+  .services__card h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+.services {
+  height: 2600px;
+}
+
+.services h1 {
+  font-size: 1.2rem;
+}
+
+.services__card {
+  width: 300px 
+}
+}
+
+
+
+
+/* Testimonials
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+
+.testimonials h1 {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  margin-bottom: 2rem;
+  font-size: 2.0rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+  
+}
+
+.container {
+   
+    background-color: rgba(31, 44, 22, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 24px 32px;
+ 
+  }
+
+  .container button {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #EBD036;
+    background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 30%,
+    rgb(235, 208, 54, 0.1) 100%);
+
+    font-size: 1rem;
+    cursor: pointer;
+    
+  }
+  
+  /* Clear floats after containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 3%;
+    width: 250px;
+  
+  }
+
+  
+  /* Increase the font-size of a span element */
+  .container span {
+    font-size: 23px;
+    margin-right: 15px;
+    background-color: #EBD036;
+    background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+    rgb(235, 208, 54, 0.2) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    font-family: 'Castoro Titling' ;
+  }
+  
+  .container p {
+    font-size: 90%;
+
+  }
+
+  .container i {
+   
+  font-size: 90%;
+ 
+  }
+
+  .Avatar:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;   
+    cursor: pointer;
+    opacity: 80%;
+    
+  }
+
+
+
+
+
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .container {
+      text-align: center;
+    }
+  
+    .container img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  }
+
+  /*form*/
+
+  
+
+  .bottom {
+    
+    float: none;
+    width: 100%;
+
+
+
+  }
+
+  .bottom h1 {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+  }
+
+#fcf-form {
+  display:block;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 24px 32px;
+}
+
+.fcf-body {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-align: center;
+
+  padding: 30px;
+  padding-bottom: 10px;
+
+  border-radius: 0.25rem;
+  max-width: 100%;
+  font-family: 'Castoro Titling';
+  
+}
+
+.fcf-h3 {
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  background-size: 100%;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+  }
+
+.fcf-form-group {
+  margin-bottom: 1rem;  font-family: 'Castoro Titling';
+}
+
+.fcf-input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.fcf-form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+background-color: transparent;
+  background-clip: padding-box;
+
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fcf-form-control:focus {
+  border: 1px solid #313131;
+}
+
+select.fcf-form-control[size], select.fcf-form-control[multiple] {
+  height: auto;
+}
+
+textarea.fcf-form-control {
+  font-family: -apple-system, Arial, sans-serif;
+  height: auto;
+}
+
+label.fcf-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.fcf-credit {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #545b62;
+}
+
+.fcf-credit a {
+  color: #545b62;
+  text-decoration: underline;
+}
+
+.fcf-credit a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.fcf-btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fcf-btn {
+      transition: none;
+  }
+}
+
+.fcf-btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.fcf-btn:focus, .fcf-btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.fcf-btn-primary {
+  color: #fff;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+}
+
+.fcf-btn-primary:hover {
+  color: #000000;
+  background-color: #EBD036;
+
+}
+
+.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+  color: #fff;
+  background-color: #EBD036;
+  background-image: linear-gradient(to bottom, rgba(33, 33, 31, 0.5) 5%,
+  rgb(235, 208, 54, 0.2) 100%);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.fcf-btn-block {
+  display: block;
+  width: 100%;
+}
+
+.fcf-btn-block+.fcf-btn-block {
+  margin-top: 0.5rem;
+}
+
+input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+  width: 100%;
+}
+
+.footer {
+ margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.footer span {
+  font-size: 1rem;
+}
+
+.footer p {
+  font-size: 0.6rem;
+}
